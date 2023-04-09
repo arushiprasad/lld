@@ -1,0 +1,41 @@
+5:10 pm
+
+
+Multilevel cache with n levels
+- each can have different size
+- can have different eviction policy
+
+-Read
+  - check l1, found? return, else check l2.. so on. When found, add value to all previous caches
+
+- write
+  - write l1, then all levels below it
+  - if at any level, value of key is same, dont write below
+
+
+
+Classes:
+
+Cache Interface impl by multilevel cache(how to initialise? maybe pass size and eviction policy
+for each)
+
+EvictionPolicy{ // decide how to store this into map
+// hashmap
+// any other ds needed to decide when and how to evict
+// in case of LRU, needs a queue of size n
+// in case of lfu, needs treemap maybe? to decide order of items in map, ordered by frequency
+// of access
+// eviction policy on set would:
+- see if some element should be removed
+- then add to map
+on get:
+- see if some element should be incremented,
+- update map
+
+set and get methods of cache should call eviction policy internally
+
+private hashmap
+eviction policy
+
+- set (should use the eviction policy)
+- get (should use eviction policy)
