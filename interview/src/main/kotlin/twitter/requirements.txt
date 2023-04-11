@@ -1,0 +1,48 @@
+Implement an in-memory Twitter (micro-blogging site)
+
+- post a tweet
+  - text
+  - maybe image
+  - attachments
+  - fan out tweet followers
+- follow/unfollow
+- get feed
+- delete tweet
+
+classes-
+
+Tweet(
+id:
+text:
+image:
+attachments:
+metadata:
+)
+
+Feed object(
+
+)
+
+user(
+followers:List<User/userId)
+)
+
+twitterservice
+
+- user will create tweet
+  - tweet
+  -user creating
+  - fetch followers to fan out and add to thier feed
+
+- fetch feed (userid) :Feed object - all info
+- follow (calling user, followuser) - add calling user to followuser- followers
+
+
+To note:
+- Fetch feed should be implemented separately, using a feed service
+- Feed should be paginated, first iteration was not paginated
+
+
+
+
+

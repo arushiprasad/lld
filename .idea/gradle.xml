@@ -8,7 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/coresvcs-common" />
+            <option value="$PROJECT_DIR$/interview" />
           </set>
         </option>
       </GradleProjectSettings>
